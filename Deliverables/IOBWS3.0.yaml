@@ -6152,12 +6152,6 @@ components:
         - "MANUAL"
         - "MOTO"
 
-    bank:
-      type: string
-      description: Icelandic bank number.
-      pattern: "missing"
-      example: "missing"
-
     transactionFeesDetail:
       description: |
         A single transaction fee details.
@@ -6938,7 +6932,7 @@ components:
           type: string
           format: date
         partialPayment:
-          type: boolean
+          $ref: "#/components/schemas/partialPayment"
         chargeBearer:
           $ref: "#/components/schemas/chargeBearer"
         serviceLevel:
@@ -11162,26 +11156,14 @@ components:
     icelandicPurpose:
       description: |
         Standardised definition of transaction used in the Iceland market to define the purpose of the transaction.
-      type: object
-      properties:
-        code:
-          type: string
-          maxLength: 3
-        description:
-          type: string
-          maxLength: 150
+      type: string
+      maxLength: 3
 
     centralBankPurposeCode:
       description: |
-        Standardised definition of purpose code required by the Icelandic Central Bank.
-      type: object
-      properties:
-        code:
-          type: string
-          maxLength: 3
-        description:
-          type: string
-          maxLength: 150
+        Standardised definition of purpose code required by the Icelandic Central Bank.  
+      type: string
+      maxLength: 3
 
 
   parameters:
@@ -14338,9 +14320,7 @@ components:
             "currency": "ISK",
             "amount": "1235"
           },
-          "icelandicPurpose": {
-            "code": "03"
-          },
+          "icelandicPurpose": "03",
           "remittanceInformationUnstructured": "My description"
         }
 
@@ -14365,9 +14345,7 @@ components:
           "ultimateCreditorId": "0109722329",
           "ultimateCreditor": "Páll Pálsson (Real receiver)",
           "partialPayment": "true",
-          "icelandicPurpose": {
-            "code": "03"
-          },
+          "icelandicPurpose": "03",
           "remittanceInformationUnstructured": "My description"
         }
 
@@ -14388,9 +14366,7 @@ components:
             "amount": "1235"
           },
           "partialPayment": "true",
-          "icelandicPurpose": {
-            "code": "87"
-          },
+          "icelandicPurpose": "87",
           "remittanceInformationUnstructured": "My description"
         }
 
@@ -14475,9 +14451,7 @@ components:
             "currency": "ISK",
             "amount": "1235"
           },
-          "icelandicPurpose": {
-            "code": "87"
-          },
+          "icelandicPurpose": "87",
           "remittanceInformationUnstructured": "My description",
           "startDate": "2020-03-01",
           "executionRule": "preceeding",
@@ -14498,11 +14472,10 @@ components:
             "bban": "030013000001"
           },
           "instructedAmount": {
-            "amount": "1235"
+              "currency": "ISK", 
+              "amount": "1235"
           },
-          "icelandicPurpose": {
-            "code": "87"
-          },
+          "icelandicPurpose": "87",
           "remittanceInformationUnstructured": "My description",
           "startDate": "2020-03-01",
           "executionRule": "preceeding",
@@ -14513,7 +14486,7 @@ components:
     paymentInitiationDomesticBody_bulk-payments_json:
       value:
         {
-          "paymentInformationId": "75BA1A88-4184-45C0-BE88-AABFBEEEE230",
+          "paymentInformationId": "4145A7CA917048589E777B69468E5775",
           "batchBookingPreferred": "true",
           "requestExecutionDate": "2020-08-01",
           "payments": [
@@ -14528,7 +14501,8 @@ components:
                 "bban": "030013000001"
               },
               "instructedAmount": {
-                "amount": "1235"
+                  "currency": "ISK", 
+                  "amount": "1235"
               },
               "icelandicPurpose": {
                 "code": "87"
@@ -14546,11 +14520,10 @@ components:
                 "bban": "030013000001"
               },
               "instructedAmount": {
-                "amount": "1235"
+                  "currency": "ISK", 
+                  "amount": "1235"
               },
-              "icelandicPurpose": {
-                "code": "87"
-              },
+              "icelandicPurpose": "87",
               "remittanceInformationUnstructured": "My description"
             }
           ]
