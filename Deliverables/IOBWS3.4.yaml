@@ -7799,11 +7799,13 @@ components:
           $ref: "#/components/schemas/debtorId"
         ultimateDebtor: # N.A. for all, but can be used by ASPSP if needed
           $ref: "#/components/schemas/ultimateDebtor"
+        ultimateDebtorId:
+          $ref: "#/components/schemas/ultimateDebtorId"
         instructedAmount:
           $ref: "#/components/schemas/amount"
         exchangeRateInformation: # N.A. for all, but can be used by ASPSP if needed
           $ref: "#/components/schemas/paymentExchangeRate"
-        creditorAccount: 
+        creditorAccount:
           $ref: "#/components/schemas/accountReference"
         creditorAgent:
           $ref: "#/components/schemas/bicfiOrIdentification"
@@ -7819,8 +7821,10 @@ components:
           description: Identification of Creditors, e.g. a SEPA Creditor ID.
           type: string
           maxLength: 35
-        ultimateCreditor: # N.A.
+        ultimateCreditor:
           $ref: "#/components/schemas/ultimateCreditor"
+        ultimateCreditorId:
+          $ref: "#/components/schemas/ultimateCreditorId"
         chargeBearer: #In some payment product N.A. in some Optional in some conditional
           $ref: "#/components/schemas/chargeBearer"
         serviceLevel:
@@ -7926,7 +7930,18 @@ components:
           $ref: "#/components/schemas/paymentExchangeRate"
         transactionFeesDetails:
           $ref: "#/components/schemas/transactionFeesList"
-          
+        endToEndIdentification: # batchBookingPreferred
+          type: string
+          maxLength: 35
+        debtorId: # N.A. for all, but can be used by ASPSP if needed # batchBookingPreferred
+          $ref: "#/components/schemas/debtorId"
+        icelandicPurposeCode: # batchBookingPreferred
+          $ref: "#/components/schemas/icelandicPurposeCode"
+        remittanceInformationUnstructured: # batchBookingPreferred
+          $ref: "#/components/schemas/remittanceInformationUnstructured"
+        remittanceInformationStructuredArray: # batchBookingPreferred
+          $ref: "#/components/schemas/remittanceInformationStructuredArray"
+
     bulkPaymentInitiationElementDomesticError:
       type: object
       nullable: true
