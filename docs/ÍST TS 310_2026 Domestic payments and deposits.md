@@ -1,7 +1,7 @@
 ---
 title: "ÍST TS 310:2026"
 author: ICS 35.240
-date: "Entry into force 18-11-2026"
+date: "Entry into force TODO"
 subject: "Icelandic Online Banking Webservices "
 keywords: [IOBWS, ÍST, TS, 310]
 subtitle: ["Tækniforskrift - Innlendar greiðslur og innlán", "Technical Specification - Domestic payments and deposits"]
