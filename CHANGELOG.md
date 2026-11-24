@@ -15,11 +15,19 @@ All notable changes to this project will be documented in this file. The project
 - *bulkPaymentInitiationDomesticWithStatusResponse* now returns the batch booking top element fields *endToEndIdentification*, *debtorId*, *icelandicPurposeCode*, *remittanceInformationUnstructured* and *remittanceInformationStructuredArray* to match *bulkPaymentInitiationDomestic_json*.
 - *address* schema now enforces the ISO 20022 PostalAddress lengths: *buildingNumber* maxLength 16, *townName* maxLength 35, *postCode* maxLength 16, alongside the existing *streetName* maxLength 70. Fixed the misspelt *buildingNumber* key in the schema example.
 
-## [Payments & Deposits 3.3.0]
+## [Documents 3.2] - 2026-12-02
+
+- Minor version release of TS 314, identifying as version 3.2. Overhaul of the Documents contract to align with the RB Documents API and the patterns of TS 315 Claims: single document creation and retrieval, batches as a separate resource, cross-references as addressable resources, storage system removed from the API, and the common IOBWS error model. Consolidates PRs #287 and #290.
+- Accepted by TN-FMÞ-VH7 at VH7-45 on 2026-10-27 and approved by FUT on 2026-11-12.
+- IOBWS-Documents3.1.yaml renamed to IOBWS-Documents3.2.yaml to match minor version.
+- TS 314 issued as [ÍST TS 314:2026](Deliverables/%C3%8DST%20TS%20314_2026%20Digital%20Documents.pdf) (replaces TS 314:2025). Source and PDF renamed, keeping the file history of the earlier editions.
+- README.md and the scope list in TS 316 updated to reference the 2026 edition. The TS 316 PDF has not been regenerated.
+
+## [Payments & Deposits 3.3.0] - 2026-10-26
 
 - Minor version release of TS 310 and TS 313, both identify as version 3.3 (TS 313 previously still identified as 3.1).
 - PR #259, batch booking support for domestic bulk payments: when *batchBookingPreferred* is true, the bulk top element can carry *endToEndIdentification*, *icelandicPurposeCode*, *remittanceInformationUnstructured* and *remittanceInformationStructuredArray* for the single combined booking entry, and optionally *debtorId*.
-- Reviewed at TN-FMÞ-VH7-39 and VH7-42, accepted by TN-FMÞ-VH7 on 2026-10-07.
+- Reviewed at TN-FMÞ-VH7-39 and VH7-42, accepted by TN-FMÞ-VH7 on 2026-10-07 and approved by FUT on 2026-10-15.
 - IOBWS3.2.yaml renamed to IOBWS3.3.yaml to match minor version.
 - Fixed indentation in card account examples that stopped strict YAML parsers, including the Redocly linter, from reading the file.
 - Documents TS 310, linter ignore file and README.md updated to reference IOBWS3.3.yaml.

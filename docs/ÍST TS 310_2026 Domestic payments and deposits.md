@@ -45,7 +45,7 @@ titlefont: Arial.ttf
 
 # Foreword {.unnumbered}
 <!-- ForewordStart -->
-This ÍST Technical Specification was developed in accordance with "ÍST Reglur um tækniforskriftir, tækniskýrslur og vinnustofusamþykktir" (*e.* IST rules on Technical Specifications, Technical Reports and Workshop Agreements). The TS (Technical specification) was prepared by the technical committee TN-FMÞ (The Technical Committee on Financial Services) that operates within FUT (Sector committee for ICT standardization) following a public call for participation within TN-FMÞ. The final draft was approved by TN-FMÞ on the {{finaldraft_date}} approved by FUT on the {{approve_date}}. The text of ÍST {{spec_id}} was submitted to IST for publication on {{publication_date}}.
+This ÍST Technical Specification was developed in accordance with "ÍST Reglur um tækniforskriftir, tækniskýrslur og vinnustofusamþykktir" (*e.* IST rules on Technical Specifications, Technical Reports and Workshop Agreements). The TS (Technical specification) was prepared by the technical committee TN-FMÞ (The Technical Committee on Financial Services) that operates within FUT (Sector committee for ICT standardization) following a public call for participation within TN-FMÞ. The final draft was approved by TN-FMÞ on the {{finaldraft_date}} and approved by FUT on the {{approve_date}}. The text of ÍST {{spec_id}} was submitted to IST for publication on {{publication_date}}.
  
 The accompanying OpenAPI 3.0.1 definition "{{yaml_definition}}" located at [https://github.com/stadlar/IST-FUT-FMTH/tree/master/Deliverables](https://github.com/stadlar/IST-FUT-FMTH/tree/master/Deliverables), should be viewed as an integral part of ÍST {{spec_id}}. 
 
@@ -507,7 +507,7 @@ The [listing in @lst:bulk_response] shows an example of such a response.
 
 <!-- paymentInitiationDomesticBody_bulk-payments_with_status_json -->
 ```{.json caption="Example of bulk status response with errors on sub-elements." #lst:bulk_response}
-!include`startLine=15094, endLine=15159, dedent=7` "Deliverables/IOBWS3.4.yaml"
+!include`startLine=15109, endLine=15174, dedent=7` "Deliverables/IOBWS3.4.yaml"
 ```
 
 # Accounts Service
@@ -518,7 +518,7 @@ When querying information about domestic accounts, there is an option to request
 
 <!-- balancesDomesticExample6_RegularAccount -->
 ```{.json caption="Example of information about an account with credit limit" #lst:accexample6}
-!include`startLine=14740, endLine=14756, dedent=7` "Deliverables/IOBWS3.4.yaml"
+!include`startLine=14755, endLine=14771, dedent=7` "Deliverables/IOBWS3.4.yaml"
 ```
 
 The definition of the transaction details returned as a list includes elements that are applicable to the broad range of use cases covered by the NextGenPSD2. [Table @tbl:transaction_domestic] has descriptions for the elements that are applicable to the domestic context which might need further explanation.
@@ -617,7 +617,7 @@ An example of how this would look for a domestic account is provided in [listing
 
 <!-- transactionsExampleDomestic4_RegularAccount_json -->
 ``` {.json caption="Example result of a transaction detail query." #lst:transexample}
-!include`startLine=14781, endLine=14814, dedent=7` "Deliverables/IOBWS3.4.yaml"
+!include`startLine=14796, endLine=14829, dedent=7` "Deliverables/IOBWS3.4.yaml"
 ```
 
 # Confirmation of Funds

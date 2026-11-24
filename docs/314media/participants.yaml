@@ -5,12 +5,12 @@ include-before: |
   | ---------------------------- | ------------------------ | --------------------------- | ---------------- |
   | Guðmundur Andri Hjálmarsson  | Reiknistofa bankanna hf. | Kristján Theódór Sigurðsson |  Arion banki hf. |
   | Þórný Pétursdóttir           | Reiknistofa bankanna hf. | Kristinn Stefánsson         |  Arion banki hf. |
-  | Halldór Vagn Hreinsson       | Íslandsbanki hf.         |                             |                  |
-  |                              |                          |                             |                  |
-  |                              |                          |                             |                  |
+  | Halldór Vagn Hreinsson       | Íslandsbanki hf.         | Hilmir Vilberg Arnarsson    |  Arion banki hf. |
+  | Sigurvin Frank Garðarsson    | Íslandsbanki hf.         | Ármann Hagalín Jónsson      |  Arion banki hf. |
+  | Jóhannes Þór Ágústarson      | Íslandsbanki hf.         |                             |                  |
   |                              |                          |                             |                  |
  
-  © Icelandic Standards (IST) 2021, 2022, 2025. All Rights Reserved.
+  © Icelandic Standards (IST) 2021, 2022, 2025, 2026. All Rights Reserved.
 
   Without the written permission of the publisher,  
   this technical specification document may not  
@@ -21,4 +21,4 @@ include-before: |
   agreement be disseminated through an electronic  
   database. 
     
-  3rd edition
+  4th edition
