@@ -120,8 +120,8 @@ paths:
         There are the following **payment products**:
         
           - Payment products with payment information in *JSON* format:
-            - ***foreign-payment-sepa***
-            - ***foreign-payment-cross-border***
+            - ***sepa-credit-transfers***
+            - ***cross-border-credit-transfers***
             - ***credit-transfers***
             - ***claim-payments***
             - ***card-deposits***
@@ -4312,7 +4312,7 @@ components:
     hrefEntry:
       description: Link to a resource.
       type: string
-      example: "/v1/payments/foreign-payment-sepa/1234-wertiq-983"
+      example: "/v1/payments/sepa-credit-transfers/1234-wertiq-983"
 
 
 
@@ -6775,8 +6775,8 @@ components:
           * credit-transfers
           * claim-payments
           * card-deposits
-          * foreign-payment-sepa
-          * foreign-payment-cross-border
+          * sepa-credit-transfers
+          * cross-border-credit-transfers
 
       type: object
       required:
@@ -6957,8 +6957,8 @@ components:
           * credit-transfers
           * claim-payments
           * card-deposits
-          * foreign-payment-sepa
-          * foreign-payment-cross-border
+          * sepa-credit-transfers
+          * cross-border-credit-transfers
         
         For the convenience of the implementer additional which are already predefinded in the Implementation Guidelines 
         are included (but commented in source code), such that an ASPSP may add them easily.
@@ -8119,7 +8119,7 @@ components:
       example: 
         {
         "scaRedirect": {"href": "https://www.testbank.com/asdfasdfasdf"},
-        "self": {"href": "/v1/payments/foreign-payment-sepa/1234-wertiq-983"}
+        "self": {"href": "/v1/payments/sepa-credit-transfers/1234-wertiq-983"}
         }
 
 
@@ -11362,8 +11362,8 @@ components:
           - credit-transfers
           - claim-payments
           - card-deposits
-          - foreign-payment-sepa
-          - foreign-payment-cross-border
+          - sepa-credit-transfers
+          - cross-border-credit-transfers
         
         **Remark:** For all SEPA Credit Transfer based endpoints which accept XML encoding, 
         the XML pain.001 schemes provided by EPC are supported by the ASPSP as a minimum for the body content. 
@@ -11380,8 +11380,8 @@ components:
           - "credit-transfers"
           - "claim-payments"
           - "card-deposits"
-          - "foreign-payment-sepa"
-          - "foreign-payment-cross-border"
+          - "sepa-credit-transfers"
+          - "cross-border-credit-transfers"
 
     paymentId:
       name: paymentId
@@ -11986,8 +11986,8 @@ components:
           * "credit-transfers with JSON-Body"
           * "claim-payments with JSON-Body"
           * "card-deposits with JSON-Body"
-          * "foreign-payment-sepa with JSON-Body"
-          * "foreign-payment-cross-border with JSON-Body"
+          * "sepa-credit-transfers with JSON-Body"
+          * "cross-border-credit-transfers with JSON-Body"
 
         There are the following payment-services supported:
           * "payments"
@@ -12021,9 +12021,9 @@ components:
               $ref: "#/components/examples/paymentInitiationDomesticBody_creditTransfer-claim-payments_json"
             "Example 6: 'payments' - 'card-deposits'":
               $ref: "#/components/examples/paymentInitiationDomesticBody_creditTransfer-payment-card-payments_json"
-            "Example 7: 'payments' - 'foreign-payment-sepa'":
+            "Example 7: 'payments' - 'sepa-credit-transfers'":
               $ref: "#/components/examples/paymentInitiationDomesticBody_creditTransfer-foreign-sepa-payments_json"
-            "Example 8: 'payments' - 'foreign-payment-cross-border'":
+            "Example 8: 'payments' - 'cross-border-credit-transfers'":
               $ref: "#/components/examples/paymentInitiationDomesticBody_creditTransfer-foreign-cross-border-payments_json"            
             "Example 9: 'periodic-payments' - 'credit-transfers'":
               $ref: "#/components/examples/paymentInitiationDomesticBody_creditTransfer-periodic-payments_json"
@@ -14098,7 +14098,7 @@ components:
           "_links": 
             {
             "scaRedirect": {"href": "https://www.testbank.com/asdfasdfasdf"},
-            "self": {"href": "/v1/payments/foreign-payment-sepa/1234-wertiq-983"},
+            "self": {"href": "/v1/payments/sepa-credit-transfers/1234-wertiq-983"},
             "status": {"href": "/v1/payments/1234-wertiq-983/status"},
             "scaStatus": {"href": "/v1/payments/1234-wertiq-983/authorisations/123auth456"}
             }
@@ -14247,7 +14247,7 @@ components:
         { 
           "scaStatus": "finalised",
           "_links":{
-            "status":  {"href":"/v1/payments/foreign-payment-sepa/qwer3456tzui7890/status"}
+            "status":  {"href":"/v1/payments/sepa-credit-transfers/qwer3456tzui7890/status"}
           }
         }
 
