@@ -1,7 +1,7 @@
 ---
 title: "ÍST TS 313:2026"
 author: ICS 35.240
-date: "Entry into force TODO"
+date: "Entry into force 14-12-2026"
 subject: "Icelandic Online Banking Webservices "
 keywords: [IOBWS, ÍST, TS, 313]
 subtitle: ["Tækniforskrift - Erlendar greiðslur  ", "Technical Specification - Foreign payments"]

@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. The project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Payments & Deposits 3.4.0] - Unreleased
+## [Payments & Deposits 3.4.0] - 2026-12-14
 
 - Minor version release of TS 310 and TS 313, both identify as version 3.4.
 - IOBWS3.3.yaml renamed to IOBWS3.4.yaml to match minor version. Documents TS 310 and TS 313, linter ignore file and README.md updated to reference IOBWS3.4.yaml.
